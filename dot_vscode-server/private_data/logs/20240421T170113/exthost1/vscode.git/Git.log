@@ -1,0 +1,58 @@
+2024-04-21 17:01:15.138 [info] Log level: Info
+2024-04-21 17:01:15.139 [info] Validating found git in: "git"
+2024-04-21 17:01:15.139 [info] Using git "2.34.1" from "git"
+2024-04-21 17:01:15.139 [info] > git rev-parse --show-toplevel [10ms]
+2024-04-21 17:01:15.190 [info] > git rev-parse --git-dir --git-common-dir [58ms]
+2024-04-21 17:01:15.214 [info] Open repository: /mnt/c/Repositories/TCRK-Configurations-WSL
+2024-04-21 17:01:15.264 [info] > git config --get commit.template [28ms]
+2024-04-21 17:01:15.327 [info] > git for-each-ref --format=%(refname)%00%(upstream:short)%00%(objectname)%00%(upstream:track)%00%(upstream:remotename)%00%(upstream:remoteref) refs/heads/main refs/remotes/main [64ms]
+2024-04-21 17:01:15.333 [warning] ENOENT: no such file or directory, open '/mnt/c/Repositories/TCRK-Configurations-WSL/.git/refs/remotes/origin/main'
+2024-04-21 17:01:15.361 [info] > git rev-parse refs/remotes/origin/main [29ms]
+2024-04-21 17:01:15.423 [info] > git status -z -uall [58ms]
+2024-04-21 17:01:15.455 [info] > git config --get commit.template [12ms]
+2024-04-21 17:01:15.490 [info] > git merge-base refs/heads/main refs/remotes/origin/main [60ms]
+2024-04-21 17:01:15.530 [info] > git for-each-ref --format=%(refname)%00%(upstream:short)%00%(objectname)%00%(upstream:track)%00%(upstream:remotename)%00%(upstream:remoteref) refs/heads/main refs/remotes/main [80ms]
+2024-04-21 17:01:15.535 [warning] ENOENT: no such file or directory, open '/mnt/c/Repositories/TCRK-Configurations-WSL/.git/refs/remotes/origin/main'
+2024-04-21 17:01:15.546 [info] > git rev-list --count --left-right refs/heads/main...refs/remotes/origin/main [50ms]
+2024-04-21 17:01:15.561 [info] > git rev-parse refs/remotes/origin/main [25ms]
+2024-04-21 17:01:15.604 [info] > git diff --name-status -z --diff-filter=ADMR fcc57837265304c9f419192191b9de0318c106bb...refs/remotes/origin/main [51ms]
+2024-04-21 17:01:15.639 [info] > git status -z -uall [74ms]
+2024-04-21 17:01:15.768 [info] > git check-ignore -v -z --stdin [15ms]
+2024-04-21 17:01:15.791 [info] > git ls-files --stage -- /mnt/c/Repositories/TCRK-Configurations-WSL/run.sh [10ms]
+2024-04-21 17:01:15.813 [info] > git show --textconv :run.sh [39ms]
+2024-04-21 17:01:15.825 [info] > git cat-file -s 480eb70ea7f80efbe55cc98d794389cb41a10037 [29ms]
+2024-04-21 17:03:29.826 [info] > git merge-base refs/heads/main refs/remotes/origin/main [51ms]
+2024-04-21 17:03:29.872 [info] > git rev-list --count --left-right refs/heads/main...refs/remotes/origin/main [41ms]
+2024-04-21 17:03:54.308 [info] > git add -A -- . [46ms]
+2024-04-21 17:03:54.468 [info] > git -c user.useConfigOnly=true commit --quiet --allow-empty-message --file - [153ms]
+2024-04-21 17:03:54.483 [info] > git config --get commit.template [10ms]
+2024-04-21 17:03:54.498 [info] > git config --get commit.template [10ms]
+2024-04-21 17:03:54.562 [info] > git for-each-ref --format=%(refname)%00%(upstream:short)%00%(objectname)%00%(upstream:track)%00%(upstream:remotename)%00%(upstream:remoteref) refs/heads/main refs/remotes/main [68ms]
+2024-04-21 17:03:54.567 [warning] ENOENT: no such file or directory, open '/mnt/c/Repositories/TCRK-Configurations-WSL/.git/refs/remotes/origin/main'
+2024-04-21 17:03:54.587 [info] > git rev-parse refs/remotes/origin/main [20ms]
+2024-04-21 17:03:54.651 [info] > git status -z -uall [60ms]
+2024-04-21 17:03:54.701 [info] > git config --get commit.template [13ms]
+2024-04-21 17:03:54.711 [info] > git merge-base refs/heads/main refs/remotes/origin/main [54ms]
+2024-04-21 17:03:54.722 [info] > git merge-base refs/heads/main refs/remotes/origin/main [46ms]
+2024-04-21 17:03:54.751 [info] > git rev-list --count --left-right refs/heads/main...refs/remotes/origin/main [36ms]
+2024-04-21 17:03:54.760 [info] > git for-each-ref --format=%(refname)%00%(upstream:short)%00%(objectname)%00%(upstream:track)%00%(upstream:remotename)%00%(upstream:remoteref) refs/heads/main refs/remotes/main [65ms]
+2024-04-21 17:03:54.767 [warning] ENOENT: no such file or directory, open '/mnt/c/Repositories/TCRK-Configurations-WSL/.git/refs/remotes/origin/main'
+2024-04-21 17:03:54.767 [info] > git rev-list --count --left-right refs/heads/main...refs/remotes/origin/main [42ms]
+2024-04-21 17:03:54.779 [info] > git rev-parse refs/remotes/origin/main [12ms]
+2024-04-21 17:03:54.790 [info] > git diff --name-status -z --diff-filter=ADMR fcc57837265304c9f419192191b9de0318c106bb...refs/remotes/origin/main [35ms]
+2024-04-21 17:03:54.846 [info] > git status -z -uall [63ms]
+2024-04-21 17:03:57.879 [info] > git log --oneline --cherry main...main@{upstream} -- [128ms]
+2024-04-21 17:03:58.668 [info] > git pull --tags origin main [782ms]
+2024-04-21 17:03:58.668 [info] From https://github.com/TCRK-Configurations/TCRK-Configurations-WSL
+ * branch            main       -> FETCH_HEAD
+2024-04-21 17:04:10.505 [info] > git push origin main:main [11831ms]
+2024-04-21 17:04:10.505 [info] To https://github.com/TCRK-Configurations/TCRK-Configurations-WSL.git
+   fcc5783..1aeb8e0  main -> main
+2024-04-21 17:04:10.517 [info] > git config --get commit.template [8ms]
+2024-04-21 17:04:10.556 [info] > git for-each-ref --format=%(refname)%00%(upstream:short)%00%(objectname)%00%(upstream:track)%00%(upstream:remotename)%00%(upstream:remoteref) refs/heads/main refs/remotes/main [42ms]
+2024-04-21 17:04:10.622 [info] > git status -z -uall [60ms]
+2024-04-21 17:04:10.679 [info] > git merge-base refs/heads/main refs/remotes/origin/main [53ms]
+2024-04-21 17:04:10.693 [info] > git merge-base refs/heads/main refs/remotes/origin/main [41ms]
+2024-04-21 17:04:10.725 [info] > git rev-list --count --left-right refs/heads/main...refs/remotes/origin/main [41ms]
+2024-04-21 17:04:10.732 [info] > git rev-list --count --left-right refs/heads/main...refs/remotes/origin/main [36ms]
+2024-04-21 17:04:10.775 [info] > git diff --name-status -z --diff-filter=ADMR 1aeb8e0321b0d434b8bae2c4b4c7d1882c623260...refs/remotes/origin/main [45ms]

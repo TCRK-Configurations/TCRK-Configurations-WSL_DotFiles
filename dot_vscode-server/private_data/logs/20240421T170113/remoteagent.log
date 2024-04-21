@@ -1,0 +1,63 @@
+2024-04-21 17:01:13.072 [info] 
+
+
+
+
+2024-04-21 17:01:13.072 [info] Extension host agent started.
+2024-04-21 17:01:13.072 [info] Started initializing default profile extensions in extensions installation folder. file:///home/michiel/.vscode-server/extensions
+2024-04-21 17:01:13.084 [info] Completed initializing default profile extensions in extensions installation folder. file:///home/michiel/.vscode-server/extensions
+2024-04-21 17:01:13.246 [info] [127.0.0.1][9a60f0fa][ManagementConnection] New connection established.
+2024-04-21 17:01:13.524 [info] [127.0.0.1][14d4fbc0][ExtensionHostConnection] New connection established.
+2024-04-21 17:01:13.874 [info] [127.0.0.1][14d4fbc0][ExtensionHostConnection] <9056> Launched Extension Host Process.
+2024-04-21 17:04:49.119 [info] [127.0.0.1][9a60f0fa][ManagementConnection] The client has disconnected gracefully, so the connection will be disposed.
+2024-04-21 17:04:49.170 [info] [127.0.0.1][14d4fbc0][ExtensionHostConnection] <9056> Extension Host Process exited with code: 0, signal: null.
+2024-04-21 17:04:50.971 [info] [127.0.0.1][5de573c9][ManagementConnection] New connection established.
+2024-04-21 17:04:51.323 [info] [127.0.0.1][b570ec4d][ExtensionHostConnection] New connection established.
+2024-04-21 17:04:51.343 [info] [127.0.0.1][b570ec4d][ExtensionHostConnection] <9866> Launched Extension Host Process.
+2024-04-21 17:05:40.735 [info] [127.0.0.1][5de573c9][ManagementConnection] The client has disconnected gracefully, so the connection will be disposed.
+2024-04-21 17:05:40.794 [info] [127.0.0.1][b570ec4d][ExtensionHostConnection] <9866> Extension Host Process exited with code: 0, signal: null.
+2024-04-21 17:05:42.746 [info] [127.0.0.1][8c0e6291][ManagementConnection] New connection established.
+2024-04-21 17:05:43.281 [info] [127.0.0.1][3d719a56][ExtensionHostConnection] New connection established.
+2024-04-21 17:05:43.294 [info] [127.0.0.1][3d719a56][ExtensionHostConnection] <10099> Launched Extension Host Process.
+2024-04-21 17:06:14.990 [info] [127.0.0.1][8c0e6291][ManagementConnection] The client has disconnected gracefully, so the connection will be disposed.
+2024-04-21 17:06:15.053 [info] [127.0.0.1][3d719a56][ExtensionHostConnection] <10099> Extension Host Process exited with code: 0, signal: null.
+2024-04-21 17:06:17.066 [info] [127.0.0.1][535da358][ManagementConnection] New connection established.
+2024-04-21 17:06:17.606 [info] [127.0.0.1][5485b767][ExtensionHostConnection] New connection established.
+2024-04-21 17:06:17.613 [info] [127.0.0.1][5485b767][ExtensionHostConnection] <10269> Launched Extension Host Process.
+2024-04-21 17:07:03.236 [info] [127.0.0.1][535da358][ManagementConnection] The client has disconnected gracefully, so the connection will be disposed.
+2024-04-21 17:07:03.283 [info] [127.0.0.1][5485b767][ExtensionHostConnection] <10269> Extension Host Process exited with code: 0, signal: null.
+2024-04-21 17:07:05.281 [info] [127.0.0.1][e6da5b09][ManagementConnection] New connection established.
+2024-04-21 17:07:05.855 [info] [127.0.0.1][3d6be253][ExtensionHostConnection] New connection established.
+2024-04-21 17:07:05.863 [info] [127.0.0.1][3d6be253][ExtensionHostConnection] <10486> Launched Extension Host Process.
+2024-04-21 17:08:16.042 [info] Getting Manifest... ms-azuretools.vscode-bicep
+2024-04-21 17:08:16.212 [info] Installing extension: ms-azuretools.vscode-bicep
+2024-04-21 17:08:16.527 [info] Getting Manifest... ms-dotnettools.vscode-dotnet-runtime
+2024-04-21 17:08:16.715 [info] Installing extension: ms-dotnettools.vscode-dotnet-runtime
+2024-04-21 17:08:19.067 [info] Extension signature is verified: ms-dotnettools.vscode-dotnet-runtime
+2024-04-21 17:08:19.149 [info] Extracted extension to file:///home/michiel/.vscode-server/extensions/ms-dotnettools.vscode-dotnet-runtime-2.0.3: ms-dotnettools.vscode-dotnet-runtime
+2024-04-21 17:08:19.158 [info] Renamed to /home/michiel/.vscode-server/extensions/ms-dotnettools.vscode-dotnet-runtime-2.0.3
+2024-04-21 17:08:19.160 [info] Extracting extension completed. ms-dotnettools.vscode-dotnet-runtime
+2024-04-21 17:08:21.018 [info] Extension signature is verified: ms-azuretools.vscode-bicep
+2024-04-21 17:08:22.293 [info] Extracted extension to file:///home/michiel/.vscode-server/extensions/ms-azuretools.vscode-bicep-0.26.170: ms-azuretools.vscode-bicep
+2024-04-21 17:08:22.303 [info] Renamed to /home/michiel/.vscode-server/extensions/ms-azuretools.vscode-bicep-0.26.170
+2024-04-21 17:08:22.305 [info] Extracting extension completed. ms-azuretools.vscode-bicep
+2024-04-21 17:08:22.311 [info] Extension installed successfully: ms-dotnettools.vscode-dotnet-runtime
+2024-04-21 17:08:22.311 [info] Extension installed successfully: ms-azuretools.vscode-bicep
+2024-04-21 17:09:27.562 [info] Uninstalling extension from the profile: ms-dotnettools.vscode-dotnet-runtime@2.0.3 file:///home/michiel/.vscode-server/extensions/extensions.json
+2024-04-21 17:09:27.573 [error] Failed to uninstall extension from the profile: ms-dotnettools.vscode-dotnet-runtime@2.0.3 file:///home/michiel/.vscode-server/extensions/extensions.json Cannot uninstall '.NET Install Tool' extension. 'Bicep' extension depends on this.
+2024-04-21 17:11:10.239 [info] Getting Manifest... ms-azure-devops.azure-pipelines
+2024-04-21 17:11:10.372 [info] Installing extension: ms-azure-devops.azure-pipelines
+2024-04-21 17:11:10.710 [info] Getting Manifest... ms-vscode.azure-account
+2024-04-21 17:11:10.904 [info] Installing extension: ms-vscode.azure-account
+2024-04-21 17:11:12.892 [info] Extension signature is verified: ms-vscode.azure-account
+2024-04-21 17:11:12.897 [info] Extension signature is verified: ms-azure-devops.azure-pipelines
+2024-04-21 17:11:12.995 [info] Extracted extension to file:///home/michiel/.vscode-server/extensions/ms-vscode.azure-account-0.11.6: ms-vscode.azure-account
+2024-04-21 17:11:13.004 [info] Renamed to /home/michiel/.vscode-server/extensions/ms-vscode.azure-account-0.11.6
+2024-04-21 17:11:13.006 [info] Extracting extension completed. ms-vscode.azure-account
+2024-04-21 17:11:13.034 [info] Extracted extension to file:///home/michiel/.vscode-server/extensions/ms-azure-devops.azure-pipelines-1.228.0: ms-azure-devops.azure-pipelines
+2024-04-21 17:11:13.037 [info] Renamed to /home/michiel/.vscode-server/extensions/ms-azure-devops.azure-pipelines-1.228.0
+2024-04-21 17:11:13.039 [info] Extracting extension completed. ms-azure-devops.azure-pipelines
+2024-04-21 17:11:13.042 [info] Extension installed successfully: ms-vscode.azure-account
+2024-04-21 17:11:13.042 [info] Extension installed successfully: ms-azure-devops.azure-pipelines
+2024-04-21 17:14:19.967 [info] [127.0.0.1][e6da5b09][ManagementConnection] The client has disconnected gracefully, so the connection will be disposed.
+2024-04-21 17:14:20.107 [info] [127.0.0.1][3d6be253][ExtensionHostConnection] <10486> Extension Host Process exited with code: 0, signal: null.

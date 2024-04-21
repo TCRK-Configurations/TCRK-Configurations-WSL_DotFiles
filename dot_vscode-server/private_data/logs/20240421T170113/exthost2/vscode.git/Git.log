@@ -1,0 +1,18 @@
+2024-04-21 17:04:52.789 [info] Log level: Info
+2024-04-21 17:04:52.789 [info] Validating found git in: "git"
+2024-04-21 17:04:52.789 [info] Using git "2.34.1" from "git"
+2024-04-21 17:04:52.840 [info] > git rev-parse --show-toplevel [54ms]
+2024-04-21 17:04:52.868 [info] > git rev-parse --git-dir --git-common-dir [21ms]
+2024-04-21 17:04:52.889 [info] Open repository: /mnt/c/Repositories/TCRK-Configurations-WSL
+2024-04-21 17:04:52.927 [info] > git config --get commit.template [23ms]
+2024-04-21 17:04:53.036 [info] > git for-each-ref --format=%(refname)%00%(upstream:short)%00%(objectname)%00%(upstream:track)%00%(upstream:remotename)%00%(upstream:remoteref) refs/heads/main refs/remotes/main [113ms]
+2024-04-21 17:04:53.131 [info] > git status -z -uall [83ms]
+2024-04-21 17:04:53.174 [info] > git config --get commit.template [9ms]
+2024-04-21 17:04:53.198 [info] > git merge-base refs/heads/main refs/remotes/origin/main [59ms]
+2024-04-21 17:04:53.253 [info] > git merge-base refs/heads/main refs/remotes/origin/main [64ms]
+2024-04-21 17:04:53.261 [info] > git for-each-ref --format=%(refname)%00%(upstream:short)%00%(objectname)%00%(upstream:track)%00%(upstream:remotename)%00%(upstream:remoteref) refs/heads/main refs/remotes/main [89ms]
+2024-04-21 17:04:53.275 [info] > git rev-list --count --left-right refs/heads/main...refs/remotes/origin/main [66ms]
+2024-04-21 17:04:53.321 [info] > git rev-list --count --left-right refs/heads/main...refs/remotes/origin/main [62ms]
+2024-04-21 17:04:53.334 [info] > git diff --name-status -z --diff-filter=ADMR 1aeb8e0321b0d434b8bae2c4b4c7d1882c623260...refs/remotes/origin/main [52ms]
+2024-04-21 17:04:53.340 [info] > git status -z -uall [66ms]
+2024-04-21 17:04:53.546 [info] > git check-ignore -v -z --stdin [63ms]

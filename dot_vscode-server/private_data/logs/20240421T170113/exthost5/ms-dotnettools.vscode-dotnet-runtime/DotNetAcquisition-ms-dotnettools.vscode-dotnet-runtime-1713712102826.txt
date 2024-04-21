@@ -1,0 +1,81 @@
+4/21/2024, 5:08:22 PM DotnetWSLCheckEvent
+Checking if system is WSL. OS: linux
+
+4/21/2024, 5:08:22 PM DotnetWSLOperationOutputEvent
+The output of the WSL check:
+stdout: Linux version 5.15.146.1-microsoft-standard-WSL2 (root@65c757a075e2) (gcc (GCC) 11.2.0, GNU ld (GNU Binutils) 2.37) #1 SMP Thu Jan 11 04:09:03 UTC 2024
+
+stderr: 
+status: 0
+
+4/21/2024, 5:08:23 PM DotnetRuntimeAcquisitionStarted
+bcf1754f51e047c9496e95489f0796759eadf89b340c12bde65beaf959b7d7d8
+
+4/21/2024, 5:08:23 PM DotnetAcquisitionRequested
+8.0
+bcf1754f51e047c9496e95489f0796759eadf89b340c12bde65beaf959b7d7d8
+
+4/21/2024, 5:08:23 PM WebRequestSent
+https://dotnetcli.blob.core.windows.net/dotnet/release-metadata/releases-index.json
+
+4/21/2024, 5:08:23 PM DotnetVersionResolutionCompleted
+8.0
+8.0.4
+
+4/21/2024, 5:08:23 PM DotnetInstallKeyCreatedEvent
+The requested version 8.0.4 is now marked under the install key: 8.0.4~x64.
+
+4/21/2024, 5:08:23 PM DotnetAcquisitionStarted
+8.0.4~x64
+8.0.4
+bcf1754f51e047c9496e95489f0796759eadf89b340c12bde65beaf959b7d7d8
+
+4/21/2024, 5:08:23 PM WebRequestSent
+https://dot.net/v1/dotnet-install.sh
+
+4/21/2024, 5:08:25 PM DotnetFileWriteRequestEvent
+Request to write
+2024-04-21T15:08:25.532Z
+e3a9dfa6aea2d6e514af4ac406368f2add4cdc8d394209aa545f3b9e96dfa52e
+
+4/21/2024, 5:08:25 PM DotnetLockAttemptingAcquireEvent
+Lock Acquisition request to begin.
+2024-04-21T15:08:25.537Z
+df91453a406a0222ed0323ca3be6ab656a4ce33b01b162dfbc09c4331ef464ee
+e3a9dfa6aea2d6e514af4ac406368f2add4cdc8d394209aa545f3b9e96dfa52e
+
+4/21/2024, 5:08:25 PM DotnetLockAcquiredEvent
+Lock Acquired.
+2024-04-21T15:08:25.553Z
+df91453a406a0222ed0323ca3be6ab656a4ce33b01b162dfbc09c4331ef464ee
+e3a9dfa6aea2d6e514af4ac406368f2add4cdc8d394209aa545f3b9e96dfa52e
+
+4/21/2024, 5:08:25 PM DotnetFileWriteRequestEvent
+File content needed to be updated.
+2024-04-21T15:08:25.555Z
+e3a9dfa6aea2d6e514af4ac406368f2add4cdc8d394209aa545f3b9e96dfa52e
+
+4/21/2024, 5:08:25 PM DotnetLockReleasedEvent
+Lock about to be released.
+2024-04-21T15:08:25.556Z
+df91453a406a0222ed0323ca3be6ab656a4ce33b01b162dfbc09c4331ef464ee
+e3a9dfa6aea2d6e514af4ac406368f2add4cdc8d394209aa545f3b9e96dfa52e
+
+4/21/2024, 5:08:25 PM DotnetInstallScriptAcquisitionCompleted
+
+4/21/2024, 5:08:31 PM DotnetAcquisitionCompleted
+8.0.4~x64
+8.0.4
+/home/michiel/.vscode-server/data/User/globalStorage/ms-dotnettools.vscode-dotnet-runtime/.dotnet/8.0.4~x64/dotnet
+
+4/21/2024, 5:08:31 PM DotnetInstallationValidated
+8.0.4~x64
+
+4/21/2024, 5:08:31 PM DotnetCommandSucceeded
+acquire
+
+4/21/2024, 5:08:31 PM DotnetRuntimeAcquisitionTotalSuccessEvent
+8.0
+8.0.4~x64
+bcf1754f51e047c9496e95489f0796759eadf89b340c12bde65beaf959b7d7d8
+/home/michiel/.vscode-server/data/User/globalStorage/ms-dotnettools.vscode-dotnet-runtime/.dotnet/8.0.4~x64/dotnet

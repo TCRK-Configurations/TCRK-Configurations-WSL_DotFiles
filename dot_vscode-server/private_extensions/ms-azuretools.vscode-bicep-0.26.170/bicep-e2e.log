@@ -1,0 +1,275 @@
+2024-04-10T22:02:14.787Z info: Current log level: debug.
+2024-04-10T22:02:14.793Z info: Acquiring dotnet runtime...
+2024-04-10T22:02:16.127Z debug: Found dotnet command at '/__w/1/s/bicep/src/vscode-bicep/.vscode-test/user-data/User/globalStorage/ms-dotnettools.vscode-dotnet-runtime/.dotnet/8.0.4~x64/dotnet'.
+2024-04-10T22:02:16.127Z info: Launching Bicep language service...
+2024-04-10T22:02:16.127Z debug: Found language server at '/__w/1/s/bicep/src/vscode-bicep/bicepLanguageServer/Bicep.LangServer.dll'.
+2024-04-10T22:02:17.501Z info: Bicep language service started.
+2024-04-10T22:02:19.969Z debug: Deployment Pane for /__w/1/s/bicep/src/vscode-bicep/src/test/e2e/examples/101/vm-simple-linux/main.bicepparam is ready.
+2024-04-10T22:02:22.225Z debug: Deployment Pane for /__w/1/s/bicep/src/vscode-bicep/src/test/e2e/examples/101/vm-simple-linux/main.bicep is ready.
+2024-04-10T22:02:24.357Z debug: Deployment Pane for /__w/1/s/bicep/src/vscode-bicep/src/test/e2e/examples/201/sql/main.bicepparam is ready.
+2024-04-10T22:02:26.554Z debug: Deployment Pane for /__w/1/s/bicep/src/vscode-bicep/src/test/e2e/examples/201/sql/main.bicep is ready.
+2024-04-10T22:02:27.216Z debug: PasteAsBicep (copy/paste): Result: "
+  {
+      "$schema": "https://schema.management.azure.com/schemas/2019-04-01/deploymentTemplate.json#",
+      "contentVersion": "1.0.0.0",
+      "parameters": {
+          "location": {
+              "type": "string"
+          },
+          "existingVirtualMachineNames": {
+              "type": "array"
+          },
+          "sqlServerLicenseType": {
+              "type": "string"
+          },
+          "existingVmResourceGroup": {
+              "type": "string"
+          },
+          "groupResourceId": {
+              "type": "string"
+          },
+          "domainAccountPassword": {
+              "type": "securestring"
+          },
+          "sqlServicePassword": {
+              "type": "securestring"
+          }
+      },
+      "variables": {
+      },
+      "resources": [
+          {
+              "name": "[trim(parameters('existingVirtualMachineNames')[copyIndex()])]",
+              "type": "Microsoft.SqlVirtualMachine/SqlVirtualMachines",
+              "apiVersion": "2017-03-01-preview",
+              "location": "[parameters('location')]",
+              "copy": {
+                  "name": "vmToClusterLoop",
+                  "count": "[length(parameters('existingVirtualMachineNames'))]"
+              },
+              "properties": {
+                  "virtualMachineResourceId": "[resourceId(parameters('existingVmResourceGroup'),'Microsoft.Compute/virtualMachines', trim(parameters('existingVirtualMachineNames')[copyIndex()]))]",
+                  "sqlServerLicenseType": "[parameters('sqlServerLicenseType')]",
+                  "SqlVirtualMachineGroupResourceId": "[parameters('groupResourceId')]",
+                  "WSFCDomainCredentials": {
+                      "ClusterBootstrapAccountPassword": "[parameters('domainAccountPassword')]",
+                      "ClusterOperatorAccountPassword": "[parameters('domainAccountPassword')]",
+                      "SqlServiceAccountPassword": "[parameters('sqlServicePassword')]"
+                  }
+              }
+          }
+      ]
+  }" -> "param location string
+param existingVirtualMachineNames array
+param sqlServerLicenseType string
+param existingVmResourceGroup string
+param groupResourceId string
+
+@secure()
+param domainAccountPassword string
+
+@secure()
+param sqlServicePassword string
+
+resource existingVirtualMachineNames_resource 'Microsoft.SqlVirtualMachine/SqlVirtualMachines@2017-03-01-preview' = [
+  for item in existingVirtualMachineNames: {
+    name: trim(item)
+    location: location
+    properties: {
+      virtualMachineResourceId: resourceId(existingVmResourceGroup, 'Microsoft.Compute/virtualMachines', trim(item))
+      sqlServerLicenseType: sqlServerLicenseType
+      sqlVirtualMachineGroupResourceId: groupResourceId
+      wsfcDomainCredentials: {
+        clusterBootstrapAccountPassword: domainAccountPassword
+        clusterOperatorAccountPassword: domainAccountPassword
+        sqlServiceAccountPassword: sqlServicePassword
+      }
+    }
+  }
+]
+"
+2024-04-10T22:02:27.387Z debug: PasteAsBicep (command): Result: "
+  {
+      "$schema": "https://schema.management.azure.com/schemas/2019-04-01/deploymentTemplate.json#",
+      "contentVersion": "1.0.0.0",
+      "parameters": {
+          "location": {
+              "type": "string"
+          },
+          "existingVirtualMachineNames": {
+              "type": "array"
+          },
+          "sqlServerLicenseType": {
+              "type": "string"
+          },
+          "existingVmResourceGroup": {
+              "type": "string"
+          },
+          "groupResourceId": {
+              "type": "string"
+          },
+          "domainAccountPassword": {
+              "type": "securestring"
+          },
+          "sqlServicePassword": {
+              "type": "securestring"
+          }
+      },
+      "variables": {
+      },
+      "resources": [
+          {
+              "name": "[trim(parameters('existingVirtualMachineNames')[copyIndex()])]",
+              "type": "Microsoft.SqlVirtualMachine/SqlVirtualMachines",
+              "apiVersion": "2017-03-01-preview",
+              "location": "[parameters('location')]",
+              "copy": {
+                  "name": "vmToClusterLoop",
+                  "count": "[length(parameters('existingVirtualMachineNames'))]"
+              },
+              "properties": {
+                  "virtualMachineResourceId": "[resourceId(parameters('existingVmResourceGroup'),'Microsoft.Compute/virtualMachines', trim(parameters('existingVirtualMachineNames')[copyIndex()]))]",
+                  "sqlServerLicenseType": "[parameters('sqlServerLicenseType')]",
+                  "SqlVirtualMachineGroupResourceId": "[parameters('groupResourceId')]",
+                  "WSFCDomainCredentials": {
+                      "ClusterBootstrapAccountPassword": "[parameters('domainAccountPassword')]",
+                      "ClusterOperatorAccountPassword": "[parameters('domainAccountPassword')]",
+                      "SqlServiceAccountPassword": "[parameters('sqlServicePassword')]"
+                  }
+              }
+          }
+      ]
+  }" -> "param location string
+param existingVirtualMachineNames array
+param sqlServerLicenseType string
+param existingVmResourceGroup string
+param groupResourceId string
+
+@secure()
+param domainAccountPassword string
+
+@secure()
+param sqlServicePassword string
+
+resource existingVirtualMachineNames_resource 'Microsoft.SqlVirtualMachine/SqlVirtualMachines@2017-03-01-preview' = [
+  for item in existingVirtualMachineNames: {
+    name: trim(item)
+    location: location
+    properties: {
+      virtualMachineResourceId: resourceId(existingVmResourceGroup, 'Microsoft.Compute/virtualMachines', trim(item))
+      sqlServerLicenseType: sqlServerLicenseType
+      sqlVirtualMachineGroupResourceId: groupResourceId
+      wsfcDomainCredentials: {
+        clusterBootstrapAccountPassword: domainAccountPassword
+        clusterOperatorAccountPassword: domainAccountPassword
+        sqlServiceAccountPassword: sqlServicePassword
+      }
+    }
+  }
+]
+"
+2024-04-10T22:02:27.519Z debug: PasteAsBicep (copy/paste): Result: "
+    {
+      "type": "Microsoft.Storage/storageAccounts",
+        "apiVersion": "2021-02-01",
+          "name": "stg1",
+            "location": "[parameters('location2')]",
+              "kind": "StorageV2",
+                "sku": {
+        "name": "Premium_LRS"
+      }
+    } /* no comma */{
+      "name": "aksCluster1",
+        "type": "Microsoft.ContainerService/managedClusters",
+          "apiVersion": "2021-05-01",
+            "location": "[resourceGroup().location]",
+              "properties": {
+        "kubernetesVersion": "1.15.7",
+          "dnsPrefix": "dnsprefix",
+            "agentPoolProfiles": [
+              {
+                "name": "agentpool",
+                "count": 2,
+                "vmSize": "Standard_A1",
+                "osType": "Linux",
+                "storageProfile": "ManagedDisks"
+              }
+            ],
+              "linuxProfile": {
+          "adminUsername": "adminUserName",
+            "ssh": {
+            "publicKeys": [
+              {
+                "keyData": "keyData"
+              }
+            ]
+          }
+        },
+        "servicePrincipalProfile": {
+          "clientId": "servicePrincipalAppId",
+            "secret": "servicePrincipalAppPassword"
+        }
+      }
+    }
+  ," -> "resource stg1 'Microsoft.Storage/storageAccounts@2021-02-01' = {
+  name: 'stg1'
+  location: location2
+  kind: 'StorageV2'
+  sku: {
+    name: 'Premium_LRS'
+  }
+}
+
+resource aksCluster1 'Microsoft.ContainerService/managedClusters@2021-05-01' = {
+  name: 'aksCluster1'
+  location: resourceGroup().location
+  properties: {
+    kubernetesVersion: '1.15.7'
+    dnsPrefix: 'dnsprefix'
+    agentPoolProfiles: [
+      {
+        name: 'agentpool'
+        count: 2
+        vmSize: 'Standard_A1'
+        osType: 'Linux'
+        storageProfile: 'ManagedDisks'
+      }
+    ]
+    linuxProfile: {
+      adminUsername: 'adminUserName'
+      ssh: {
+        publicKeys: [
+          {
+            keyData: 'keyData'
+          }
+        ]
+      }
+    }
+    servicePrincipalProfile: {
+      clientId: 'servicePrincipalAppId'
+      secret: 'servicePrincipalAppPassword'
+    }
+  }
+}
+"
+2024-04-10T22:02:27.625Z debug: PasteAsBicep (copy/paste): Result: ""Mom says 'hi'"" -> "'Mom says \'hi\''"
+2024-04-10T22:02:27.789Z debug: PasteAsBicep (copy/paste): pasteType empty
+2024-04-10T22:02:27.789Z debug: PasteAsBicep (copy/paste): Result: ""Mom says 'hi' "" -> undefined
+2024-04-10T22:02:27.939Z debug: PasteAsBicep (copy/paste): pasteType empty
+2024-04-10T22:02:27.939Z debug: PasteAsBicep (copy/paste): Result: ""really" " -> undefined
+2024-04-10T22:02:28.090Z debug: PasteAsBicep (command): Exception occurred: Cannot paste JSON as Bicep inside of a string. First paste it outside of a string and then copy/paste into the string."
+2024-04-10T22:02:28.090Z debug: PasteAsBicep (command): Result: ""Mom says 'hi' "" -> undefined
+2024-04-10T22:02:28.253Z debug: PasteAsBicep (command): Exception occurred: Cannot paste JSON as Bicep inside of a string. First paste it outside of a string and then copy/paste into the string."
+2024-04-10T22:02:28.254Z debug: PasteAsBicep (command): Result: "{
+      "type": "Microsoft.Resources/resourceGroups",
+      "apiVersion": "2022-09-01",
+      "name": "rg",
+      "location": "[parameters('location')]"
+    }" -> undefined
+2024-04-10T22:02:28.421Z debug: PasteAsBicep (command): Result: ""hello"" -> "'hello'"
+2024-04-10T22:02:28.493Z debug: PasteAsBicep (command): Exception occurred: Cannot paste JSON as Bicep inside of a string. First paste it outside of a string and then copy/paste into the string."
+2024-04-10T22:02:28.493Z debug: PasteAsBicep (command): Result: ""hello"" -> undefined
+2024-04-10T22:02:28.657Z debug: PasteAsBicep (command): Result: ""hello"" -> "'hello'"
+2024-04-10T22:02:31.075Z debug: Visualizer for /__w/1/s/bicep/src/vscode-bicep/src/test/e2e/examples/101/vm-simple-linux/main.bicep is ready.
+2024-04-10T22:02:33.425Z debug: Visualizer for /__w/1/s/bicep/src/vscode-bicep/src/test/e2e/examples/201/sql/main.bicep is ready.
+2024-04-10T22:02:33.687Z debug: Visualizer for /__w/1/s/bicep/src/vscode-bicep/src/test/e2e/examples/000/empty/main.bicep is ready.

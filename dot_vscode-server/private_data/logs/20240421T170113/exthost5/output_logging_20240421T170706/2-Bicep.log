@@ -1,0 +1,7 @@
+2024-04-21T15:08:23.043Z info: Current log level: debug.
+2024-04-21T15:08:23.049Z info: Acquiring dotnet runtime...
+2024-04-21T15:08:31.161Z debug: Found dotnet command at '/home/michiel/.vscode-server/data/User/globalStorage/ms-dotnettools.vscode-dotnet-runtime/.dotnet/8.0.4~x64/dotnet'.
+2024-04-21T15:08:31.162Z info: Launching Bicep language service...
+2024-04-21T15:08:31.162Z debug: Found language server at '/home/michiel/.vscode-server/extensions/ms-azuretools.vscode-bicep-0.26.170/bicepLanguageServer/Bicep.LangServer.dll'.
+2024-04-21T15:08:32.339Z info: Bicep language service started.
+[Info  - 5:08:32 PM] Running on processId 11026
